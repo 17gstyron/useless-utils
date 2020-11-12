@@ -19,3 +19,5 @@ const arrayToObjectConverter = (arrayOfObjects, propertyName) => {
 };
 
 export default arrayToObjectConverter;
+
+// TODO: make useable for any array not just an array of objects
