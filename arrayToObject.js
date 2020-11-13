@@ -1,14 +1,13 @@
 /**
- * Converts an array of objects into an object of with nested using unique property names from each
- * @param {Array} arrayOfObjects Array of Objects to be converted into Object.
- * @param {string} propertyName Name of property that contains a unique string
- * or interger to use as property to access each object.
- * @returns {Object} An Object with nested objects from the orginal Array.
+ * Converts an array into an object.
+ * @param {Array} array Array to be converted into object.
+ * @param {string} [propertyName] Optional arguement if array is array of objects. You can use a unique property that is on every object as the keys for the new object.
+ * @returns {Object} An object built with elements from the array given.
  */
-const arrayToObject = (arrayOfObjects, propertyName) => {
+const arrayToObject = (array, propertyName) => {
   const resultObj = {}
   let index = 0
-  arrayOfObjects.forEach((element) => {
+  array.forEach((element) => {
     if (propertyName) {
       if (resultObj[element[propertyName]]) {
         throw new Error(
