@@ -1,0 +1,21 @@
+{
+  "name": "useless-utils",
+  "version": "1.0.0",
+  "description": "collection of probably useless helper functions",
+  "main": "arrayToObject.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/17gstyron/useless-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/17gstyron/useless-utils/issues"
+  },
+  "homepage": "https://github.com/17gstyron/useless-utils#readme",
+  "dependencies": {}
+}
