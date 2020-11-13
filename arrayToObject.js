@@ -5,19 +5,23 @@
  * or interger to use as property to access each object.
  * @returns {Object} An Object with nested objects from the orginal Array.
  */
-const arrayToObjectConverter = (arrayOfObjects, propertyName) => {
-  const resultObj = {};
-  arrayOfObjects.forEach((object) => {
-    if (resultObj[object[propertyName]]) {
-      throw new Error(
-        `There are multiple Objects in the array with the Property of ${propertyName}.`
-      );
+const arrayToObject = (arrayOfObjects, propertyName) => {
+  const resultObj = {}
+  let index = 0
+  arrayOfObjects.forEach((element) => {
+    if (propertyName) {
+      if (resultObj[element[propertyName]]) {
+        throw new Error(
+          `There are multiple Objects in the array with the Property of ${propertyName}.`,
+        )
+      }
+      resultObj[element[propertyName]] = element
+    } else {
+      resultObj[index] = element
+      index++
     }
-    resultObj[object[propertyName]] = object;
-  });
-  return resultObj;
-};
+  })
+  return resultObj
+}
 
-export default arrayToObjectConverter;
-
-// TODO: make useable for any array not just an array of objects
+module.exports.arrayToObject = arrayToObject
