@@ -6,7 +6,7 @@
  *  both keys and values.
  * @returns {Array} An array built with values of object given.
  */
-const objectToArray = (object, preserveKeys = null) => {
+const objectToArray = (object, preserveKeys = false) => {
   const resultArr = []
   for (const property in object) {
     if (preserveKeys) {
