@@ -1,7 +1,6 @@
 /**
  * Takes in two strings and returns how similiar they are via percentage.
  * Uses Dice's Coefficient.
- * Implementation derives from one made by aceakash.
  * @param {String} stringOne First string to be compared.
  * @param {String} stringTwo Second string to be compared.
  * @param {String} [trimByString] By default the two strings get all whitespace.
