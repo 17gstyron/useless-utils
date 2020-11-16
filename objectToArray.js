@@ -1,10 +1,7 @@
 /**
  * Converts an obeject into an array.
- * @param {Array} array Array to be converted into object.
- * @param {string} [propertyName] Optional arguement if given array is
- * an array of objects. You can use a unique property that is on every
- * object as the keys for the new object.
- * @returns {Object} An object built with elements from the array given.
+ * @param {Object} object Object to be converted into array.
+ * @returns {Array} An array built with values of object given.
  */
 const objectToArray = (object) => {
   const resultArr = []
