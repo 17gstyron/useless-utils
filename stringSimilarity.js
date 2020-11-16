@@ -13,8 +13,7 @@
 const stringSimilarity = (
   stringOne,
   stringTwo,
-  trimByString = /\s/g,
-  caseSensitive = true,
+  { trimByString = /\s/g, caseSensitive = true },
 ) => {
   stringOne = stringOne.replace(trimByString, '')
   stringTwo = stringTwo.replace(trimByString, '')
