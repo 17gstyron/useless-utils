@@ -3,16 +3,17 @@
  * @param {Any} value The value to be checked for emptiness.
  * @returns {Boolean} A boolean value that says wheather or not the given value is empty.
  */
-const isEmpty = (object, preserveKeys = false) => {
-  const resultArr = []
-  for (const property in object) {
-    if (preserveKeys) {
-      resultArr.push({ key: property, value: object[property] })
-    } else {
-      resultArr.push(object[property])
-    }
+const isEmpty = (value) => {
+  if(typeof value === 'number') {
+    return value !== 0 ? false: true
+  } else if (typeof value === 'boolean') {
+    return !value
   }
-  return resultArr
+  else if (typeof value === 'string' || (Array.isArray(value))) {
+    return value.length > 0 ? false : true
+  } else if (typeof value === 'object') {
+    return Object.keys(value).length > 0 ? false : true 
+  }
 }
 
 module.exports.isEmpty = isEmpty
