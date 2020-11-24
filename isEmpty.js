@@ -1,5 +1,5 @@
 /**
- * Checks if the given value is empty works for variable types: Array, Object, and String.
+ * Checks if the given value is empty works for all data types.
  * @param {Any} value The value to be checked for emptiness.
  * @returns {Boolean} A boolean value that says wheather or not the given value is empty.
  */
