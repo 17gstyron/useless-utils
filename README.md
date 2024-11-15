@@ -1,2 +1,2 @@
 # useless-utils
-collection of probably useless helper functions.
+collection of probably niche helper functions.
